@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About PhilLaw - PH Legal AI Assistant</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary-color: #110825;
+      --secondary-color: #5734a3;
+      --accent-color: #6c4fc9;
+      --text-color: #2d2d2d;
+      --light-gray: #f5f5f7;
+      --medium-gray: #e0e0e0;
+      --dark-gray: #8e8e93;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-gray);
+      color: var(--text-color);
+    }
+
+    /* Button Styling */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #6c4fc9, #5734a3);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      box-shadow: 0 4px 12px rgba(108, 79, 201, 0.3);
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #5734a3, #4c2ea3);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(108, 79, 201, 0.4);
+    }
+
+    .button svg {
+      stroke: white;
+      transition: transform 0.2s;
+    }
+
+    .button:hover svg {
+      transform: translateX(-3px);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 10px auto 40px;
+      background: var(--white);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      color: var(--secondary-color);
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--medium-gray), transparent);
+      margin: 30px 0;
+    }
+
+    strong {
+      color: var(--primary-color);
+    }
+
+    em {
+      color: var(--secondary-color);
+      font-style: italic;
+    }
+
+    /* Developer Section */
+    .developer-info {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid var(--medium-gray);
+      font-size: 0.95rem;
+      color: var(--dark-gray);
+    }
+
+    .developer-info a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .developer-info a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .facebook-icon {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent-color);
+      transition: fill 0.2s;
+    }
+
+    .developer-info a:hover .facebook-icon {
+      fill: var(--secondary-color);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 80px 20px 20px;
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .button {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Back to Chat Button -->
+  <a class="button" href="index.html">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-move-left-icon" style="margin-right: 8px;">
+      <path d="M6 8L2 12L6 16" />
+      <path d="M2 12H22" />
+    </svg>
+    Back to Chat
+  </a>
+
+  <div class="container">
+    <h1>About PhilLaw - PH Legal AI Assistant</h1>
+
+    <p>Welcome to <strong>PhilLaw AI</strong>, your dedicated Artificial Intelligence assistant focused exclusively on
+      Philippine legal matters. We're built on the Gemini model and tailored to help citizens, students, and legal
+      professionals quickly access and understand complex Philippine laws.</p>
+
+    <hr>
+
+    <h2> Our Mission</h2>
+    <p>Our mission is to <strong>democratize legal information</strong> in the Philippines. We strive to provide clear,
+      structured, and accessible summaries of Philippine statutes, legal doctrines, and procedures. We believe that
+      informed citizens are empowered citizens.</p>
+
+    <hr>
+
+    <h2>What We Do</h2>
+    <ul>
+      <li><strong>Provide Structured Legal Analysis:</strong> Every answer is organized into clear sections: [Legal
+        Issue], [Applicable Laws], [Analysis], and [Recommendations].</li>
+      <li><strong>Focus Exclusively on PH Law:</strong> We handle questions related to the Revised Penal Code, Civil
+        Code, Special Laws (like RA 9262 and RA 8485), and more.</li>
+      <li><strong>Maintain Language Context:</strong> We respond in the same language you use ( English, Bisaya,
+        Filipino etc.) for better comprehension.</li>
+    </ul>
+
+    <hr>
+
+    <h2> Important Disclaimer</h2>
+    <p>Please remember that <strong>PhilLaw is an AI information tool and not a substitute for a licensed
+        lawyer.</strong> The responses provided are based on available legal texts and are for general informational and
+      educational purposes only. For personalized legal advice, case-specific strategy, or representation, always
+      <strong>consult a qualified Philippine attorney</strong>.
+    </p>
+
+    <p><em>Maraming salamat sa paggamit ng PhilLaw AI!</em></p>
+
+<div class="developer-info">
+  <p>Developed by:</p>
+  <p>
+    <a href="https://www.facebook.com/condesa.jck" target="_blank">
+      <svg class="facebook-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.96 3.63 9.07 8.36 9.88v-7h-2.5v-2.88h2.5V9.93c0-2.48 1.48-3.85 3.75-3.85 1.09 0 2.23.2 2.23.2v2.44h-1.26c-1.25 0-1.63.78-1.63 1.58v1.9h2.78l-.44 2.88h-2.34v7c4.73-.81 8.36-4.92 8.36-9.88z"/>
+      </svg>
+      Jericho
+    </a>, 
+    <a href="https://www.facebook.com/JshAndrw21" target="_blank">
+      <svg class="facebook-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.96 3.63 9.07 8.36 9.88v-7h-2.5v-2.88h2.5V9.93c0-2.48 1.48-3.85 3.75-3.85 1.09 0 2.23.2 2.23.2v2.44h-1.26c-1.25 0-1.63.78-1.63 1.58v1.9h2.78l-.44 2.88h-2.34v7c4.73-.81 8.36-4.92 8.36-9.88z"/>
+      </svg>
+      Josh
+    </a>, and 
+    <a href="https://www.facebook.com/mikom0n" target="_blank">
+      <svg class="facebook-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.96 3.63 9.07 8.36 9.88v-7h-2.5v-2.88h2.5V9.93c0-2.48 1.48-3.85 3.75-3.85 1.09 0 2.23.2 2.23.2v2.44h-1.26c-1.25 0-1.63.78-1.63 1.58v1.9h2.78l-.44 2.88h-2.34v7c4.73-.81 8.36-4.92 8.36-9.88z"/>
+      </svg>
+      Miko
+    </a>
+  </p>
+</div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhilLaw - PH Legal AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navigations -->
+  <header class="top-nav">
+    <div class="nav-left">
+      <div class="dropdown" id="mainDropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span class="ai-name">PhilLaw<span class="ai-system">AI</span>
+            <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+            </svg>
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+          <a class="dropdown-item" id="newChatBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#6c4fc9">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+            </svg> New Question
+          </a>
+        </div>
+      </div>
+    </div>
+    <a href="about.html" class="info-btn">About Us</a>
+  </header>
+
+  <!-- Main Chat Interface -->
+  <main>
+    <div class="chat-container">
+      <div class="prompt-container"><h1 class="title" id="welcomeTitle">
+Kamusta! 👋 </h1>
+<p class="sub-title" id="welcomeSubtitle">
+Ako si <strong>PhilLaw AI</strong> — ang AI na magbibigay ng payo at impormasyon tungkol sa mga batas na gusto mong malaman sa Pilipinas.
+</p>
+
+        <div class="chat-messages" id="chatMessages">
+          <!-- MESSAGES will appear here -->
+        </div>
+
+        <form id="chatForm" class="input-form">
+          <div class="input-container">
+            <input type="text" id="userInput" class="user-input" placeholder="Ask your concern question about law..." />
+            <button type="submit" class="submit-prompt-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#6c4fc9;">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+              </svg>
+            </button>
+          </div>
+          <p class="disclaimer">
+            <strong> Note: </strong> PhilLaw provides general legal information. For personalized advice, consult a
+            licensed Philippine lawyer.
+          </p>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="askGemini.js"></script>
+    <script>
+      // Dropdown funtion
+      function toggleDropdown() {
+        const dropdown = document.getElementById("mainDropdown");
+        dropdown.classList.toggle("active");
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", (event) => {
+        const dropdown = document.getElementById("mainDropdown");
+        if (!dropdown.contains(event.target)) {
+          dropdown.classList.remove("active");
+        }
+      });
+
+    </script>
+  </main>
+</body>
+
+</html>
